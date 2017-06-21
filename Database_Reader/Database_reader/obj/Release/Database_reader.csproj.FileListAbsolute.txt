@@ -1,0 +1,9 @@
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\bin\Release\Database_reader.exe.config
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\bin\Release\Database_reader.exe
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\bin\Release\Database_reader.pdb
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.AddRow.resources
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.DatabaseReader.resources
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.Properties.Resources.resources
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.csproj.GenerateResource.Cache
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.exe
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.pdb
