@@ -73,37 +73,13 @@ namespace Database_reader
 
         private void move_down_Click(object sender, EventArgs e)
         {
-            int Current_Row = dataGridView1.CurrentCell.RowIndex;
-
-            if (Current_Row < dataGridView1.RowCount -1)
-            {
-                dataGridView1.Rows[++Current_Row].Selected = true;
-                dataGridView1.CurrentCell = dataGridView1.Rows[Current_Row].Cells[0];
-            }
-            else
-            {
-                dataGridView1.Rows[0].Selected = true;
-                dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
-            }
-            this.gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
+            select_next_row();
 
         }
 
         private void move_up_Click(object sender, EventArgs e)
         {
-            int Current_Row = dataGridView1.CurrentCell.RowIndex;
-
-            if (Current_Row > 0)
-            {
-                dataGridView1.Rows[--Current_Row].Selected = true;
-                dataGridView1.CurrentCell = dataGridView1.Rows[Current_Row].Cells[0];
-            }
-            else
-            {
-                dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true;
-                dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0];
-            }
-            this.gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
+            select_previous_row();
         }
 
         private void current_CheckedChanged(object sender, EventArgs e)
@@ -319,9 +295,47 @@ namespace Database_reader
             dataGridView1.CurrentRow.Cells["Column_Eps"].Value = 1;
             Season.Text = dataGridView1.CurrentRow.Cells["Column_Eps"].Value.ToString();
 
+            dataGridView1.CurrentRow.Cells["Column_Current"].Value = false;
             current.Checked = false;
-
+                        
             update_database();
+
+            select_next_row();
+
+        }
+
+        public void select_next_row()
+        {
+            int Current_Row = dataGridView1.CurrentCell.RowIndex;
+
+            if (Current_Row < dataGridView1.RowCount - 1)
+            {
+                dataGridView1.Rows[++Current_Row].Selected = true;
+                dataGridView1.CurrentCell = dataGridView1.Rows[Current_Row].Cells[0];
+            }
+            else
+            {
+                dataGridView1.Rows[0].Selected = true;
+                dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
+            }
+            this.gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
+        }
+
+        public void select_previous_row()
+        {
+            int Current_Row = dataGridView1.CurrentCell.RowIndex;
+
+            if (Current_Row > 0)
+            {
+                dataGridView1.Rows[--Current_Row].Selected = true;
+                dataGridView1.CurrentCell = dataGridView1.Rows[Current_Row].Cells[0];
+            }
+            else
+            {
+                dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true;
+                dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0];
+            }
+            this.gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
         }
     }
 }
