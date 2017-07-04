@@ -121,6 +121,7 @@
             this.title.TabIndex = 3;
             this.title.TextChanged += new System.EventHandler(this.title_TextChanged);
             this.title.KeyUp += new System.Windows.Forms.KeyEventHandler(this.title_KeyUp);
+            this.title.MouseLeave += new System.EventHandler(this.title_MouseLeave);
             // 
             // label1
             // 
@@ -241,6 +242,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(799, 640);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // Column_Id
             // 

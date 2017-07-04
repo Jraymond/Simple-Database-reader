@@ -45,25 +45,29 @@ namespace Database_reader
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
+            if (!this.searchCB.Checked)
             {
-                try
+                foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
                 {
-                    title.Text = row.Cells["Column_Title"].Value.ToString();
-                    sub_group.Text = row.Cells["Column_SubGroup"].Value.ToString();
-                    Season.Text = row.Cells["Column_Season"].Value.ToString();
-                    episode.Text = row.Cells["Column_Eps"].Value.ToString();
-                    current.Checked = Convert.ToBoolean(row.Cells["Column_Current"].Value);
-                    stalled.Checked = Convert.ToBoolean(row.Cells["Column_Stalled"].Value);
-                    notes.Text = row.Cells["Column_Notes"].Value.ToString();
-                    gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
-                }
-                catch (Exception debug)
-                {
-                    Console.Write(debug);
-                }
+                    try
+                    {
+                        title.Text = row.Cells["Column_Title"].Value.ToString();
+                        sub_group.Text = row.Cells["Column_SubGroup"].Value.ToString();
+                        Season.Text = row.Cells["Column_Season"].Value.ToString();
+                        episode.Text = row.Cells["Column_Eps"].Value.ToString();
+                        current.Checked = Convert.ToBoolean(row.Cells["Column_Current"].Value);
+                        stalled.Checked = Convert.ToBoolean(row.Cells["Column_Stalled"].Value);
+                        notes.Text = row.Cells["Column_Notes"].Value.ToString();
+                        gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
+                    }
+                    catch (Exception debug)
+                    {
+                        Console.Write(debug);
+                    }
 
+                }
             }
+            //this.searchCB.Checked = false;
         }
 
         private void notes_Leave(object sender, EventArgs e)
@@ -174,7 +178,21 @@ namespace Database_reader
 
         private void title_TextChanged(object sender, EventArgs e)
         {
-            //left empty
+            try
+            {
+                if (this.searchCB.Checked)
+                {
+                    update_database();
+                    this.animeTableAdapter.SearchFor(this.animeDatabaseDataSet.Anime, this.title.Text);
+                    this.totalIndex.Text = "/ " + dataGridView1.RowCount.ToString();
+                    this.gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("search exception");
+            }
         }
 
         private void title_KeyUp(object sender, KeyEventArgs e)
@@ -336,6 +354,16 @@ namespace Database_reader
                 dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0];
             }
             this.gotoBox.Text = (this.dataGridView1.CurrentCell.RowIndex + 1).ToString();
+        }
+
+        private void title_MouseLeave(object sender, EventArgs e)
+        {
+            //left empty
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            this.searchCB.Checked = false;
         }
     }
 }
