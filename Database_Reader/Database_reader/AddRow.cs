@@ -29,7 +29,7 @@ namespace Database_reader
         {
             
             this.title.Text = "default";
-            this.subgroup.Text = "default";
+            this.subgroup.Text = "N/a";
             this.episode.Text = "1";
             this.season.Text = "1";
         }
