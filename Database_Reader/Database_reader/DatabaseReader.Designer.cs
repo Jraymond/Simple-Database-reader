@@ -44,14 +44,6 @@
             this.notes = new System.Windows.Forms.RichTextBox();
             this.Update = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_SubGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Eps = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Season = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Current = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column_Stalled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column_Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animeDatabaseDataSet = new Database_reader.AnimeDatabaseDataSet();
             this.increment = new System.Windows.Forms.Button();
@@ -79,6 +71,13 @@
             this.Season = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.endSeason = new System.Windows.Forms.Button();
+            this.Column_Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_SubGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Eps = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Season = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Current = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column_Stalled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column_Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cover_art)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).BeginInit();
@@ -224,7 +223,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_Id,
             this.Column_Title,
             this.Column_SubGroup,
             this.Column_Eps,
@@ -243,70 +241,6 @@
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
-            // 
-            // Column_Id
-            // 
-            this.Column_Id.DataPropertyName = "ID";
-            this.Column_Id.HeaderText = "ID";
-            this.Column_Id.Name = "Column_Id";
-            this.Column_Id.ReadOnly = true;
-            this.Column_Id.Width = 45;
-            // 
-            // Column_Title
-            // 
-            this.Column_Title.DataPropertyName = "Title";
-            this.Column_Title.HeaderText = "Title";
-            this.Column_Title.Name = "Column_Title";
-            this.Column_Title.ReadOnly = true;
-            this.Column_Title.Width = 500;
-            // 
-            // Column_SubGroup
-            // 
-            this.Column_SubGroup.DataPropertyName = "Sub group";
-            this.Column_SubGroup.HeaderText = "Sub group";
-            this.Column_SubGroup.Name = "Column_SubGroup";
-            this.Column_SubGroup.ReadOnly = true;
-            this.Column_SubGroup.Width = 95;
-            // 
-            // Column_Eps
-            // 
-            this.Column_Eps.DataPropertyName = "Eps";
-            this.Column_Eps.HeaderText = "Eps";
-            this.Column_Eps.Name = "Column_Eps";
-            this.Column_Eps.ReadOnly = true;
-            this.Column_Eps.Width = 50;
-            // 
-            // Column_Season
-            // 
-            this.Column_Season.DataPropertyName = "Season";
-            this.Column_Season.HeaderText = "Season";
-            this.Column_Season.Name = "Column_Season";
-            this.Column_Season.ReadOnly = true;
-            this.Column_Season.Width = 50;
-            // 
-            // Column_Current
-            // 
-            this.Column_Current.DataPropertyName = "Current";
-            this.Column_Current.HeaderText = "Current";
-            this.Column_Current.Name = "Column_Current";
-            this.Column_Current.ReadOnly = true;
-            this.Column_Current.Width = 5;
-            // 
-            // Column_Stalled
-            // 
-            this.Column_Stalled.DataPropertyName = "Come Back";
-            this.Column_Stalled.HeaderText = "Come Back";
-            this.Column_Stalled.Name = "Column_Stalled";
-            this.Column_Stalled.ReadOnly = true;
-            this.Column_Stalled.Width = 5;
-            // 
-            // Column_Notes
-            // 
-            this.Column_Notes.DataPropertyName = "Notes";
-            this.Column_Notes.HeaderText = "Notes";
-            this.Column_Notes.Name = "Column_Notes";
-            this.Column_Notes.ReadOnly = true;
-            this.Column_Notes.Width = 5;
             // 
             // animeBindingSource
             // 
@@ -509,6 +443,62 @@
             this.endSeason.UseVisualStyleBackColor = true;
             this.endSeason.Click += new System.EventHandler(this.endSeason_Click);
             // 
+            // Column_Title
+            // 
+            this.Column_Title.DataPropertyName = "Title";
+            this.Column_Title.HeaderText = "Title";
+            this.Column_Title.Name = "Column_Title";
+            this.Column_Title.ReadOnly = true;
+            this.Column_Title.Width = 500;
+            // 
+            // Column_SubGroup
+            // 
+            this.Column_SubGroup.DataPropertyName = "Sub group";
+            this.Column_SubGroup.HeaderText = "Sub group";
+            this.Column_SubGroup.Name = "Column_SubGroup";
+            this.Column_SubGroup.ReadOnly = true;
+            this.Column_SubGroup.Width = 95;
+            // 
+            // Column_Eps
+            // 
+            this.Column_Eps.DataPropertyName = "Eps";
+            this.Column_Eps.HeaderText = "Eps";
+            this.Column_Eps.Name = "Column_Eps";
+            this.Column_Eps.ReadOnly = true;
+            this.Column_Eps.Width = 50;
+            // 
+            // Column_Season
+            // 
+            this.Column_Season.DataPropertyName = "Season";
+            this.Column_Season.HeaderText = "Season";
+            this.Column_Season.Name = "Column_Season";
+            this.Column_Season.ReadOnly = true;
+            this.Column_Season.Width = 50;
+            // 
+            // Column_Current
+            // 
+            this.Column_Current.DataPropertyName = "Current";
+            this.Column_Current.HeaderText = "Current";
+            this.Column_Current.Name = "Column_Current";
+            this.Column_Current.ReadOnly = true;
+            this.Column_Current.Width = 50;
+            // 
+            // Column_Stalled
+            // 
+            this.Column_Stalled.DataPropertyName = "Come Back";
+            this.Column_Stalled.HeaderText = "Come Back";
+            this.Column_Stalled.Name = "Column_Stalled";
+            this.Column_Stalled.ReadOnly = true;
+            this.Column_Stalled.Width = 5;
+            // 
+            // Column_Notes
+            // 
+            this.Column_Notes.DataPropertyName = "Notes";
+            this.Column_Notes.HeaderText = "Notes";
+            this.Column_Notes.Name = "Column_Notes";
+            this.Column_Notes.ReadOnly = true;
+            this.Column_Notes.Width = 5;
+            // 
             // DatabaseReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,14 +581,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column_ComeBack;
         private System.Windows.Forms.Button show_current;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_SubGroup;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Eps;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Season;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column_Current;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column_Stalled;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Notes;
         private System.Windows.Forms.CheckBox searchCB;
         private System.Windows.Forms.TextBox gotoBox;
         private System.Windows.Forms.Label totalIndex;
@@ -606,6 +588,13 @@
         private System.Windows.Forms.TextBox Season;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button endSeason;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_SubGroup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Eps;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Season;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column_Current;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column_Stalled;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Notes;
     }
 }
 

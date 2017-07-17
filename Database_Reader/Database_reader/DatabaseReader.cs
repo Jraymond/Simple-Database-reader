@@ -116,8 +116,7 @@ namespace Database_reader
 
                     if (result == DialogResult.OK)
                     {
-                        DataRow newDataRow = animeDatabaseDataSet.Tables["Anime"].NewRow();
-                        newDataRow["Id"] = dataGridView1.RowCount + 1;
+                        DataRow newDataRow = animeDatabaseDataSet.Tables["Anime"].NewRow();                        
                         newDataRow["Title"] = addrow.returnTitle;
                         newDataRow["Sub Group"] = addrow.returnSub;
                         newDataRow["Eps"] = addrow.returnEps;
@@ -164,7 +163,7 @@ namespace Database_reader
             }
             else
             {
-                int rowID = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["Column_Id"].Value);
+                int rowID = Convert.ToInt32(gotoBox.Text);
                 
                 this.animeTableAdapter.Fill(this.animeDatabaseDataSet.Anime);
                 Globals.showing_current = false;
@@ -218,7 +217,7 @@ namespace Database_reader
         {
             if(Globals.form_loaded && !this.searchCB.Checked)
             {
-                int rowID = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["Column_Id"].Value);
+                int rowID = Convert.ToInt32(gotoBox.Text);
 
                 update_database();
 
