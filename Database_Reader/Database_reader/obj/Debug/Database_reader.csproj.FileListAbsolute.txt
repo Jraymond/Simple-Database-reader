@@ -8,3 +8,4 @@ S:\VS Projects\Database Reader\Database_Reader\Database_reader\bin\Debug\Databas
 S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Debug\Database_reader.exe
 S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Debug\Database_reader.pdb
 S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Debug\Database_reader.DatabaseReader.resources
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Debug\Database_reader.csproj.CoreCompileInputs.cache

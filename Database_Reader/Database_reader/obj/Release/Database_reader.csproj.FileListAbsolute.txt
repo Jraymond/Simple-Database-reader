@@ -7,3 +7,4 @@ S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Datab
 S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.csproj.GenerateResource.Cache
 S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.exe
 S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.pdb
+S:\VS Projects\Database Reader\Database_Reader\Database_reader\obj\Release\Database_reader.csproj.CoreCompileInputs.cache

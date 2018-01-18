@@ -103,7 +103,7 @@ namespace Database_reader
 
         private void stalled_MouseUp(object sender, MouseEventArgs e)
         {
-            dataGridView1.CurrentRow.Cells["Column_ComeBack"].Value = stalled.Checked;
+            dataGridView1.CurrentRow.Cells["Column_Stalled"].Value = stalled.Checked;
         }
 
         private void Add_Click(object sender, EventArgs e)
